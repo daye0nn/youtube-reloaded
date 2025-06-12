@@ -1,11 +1,5 @@
 import mongoose from "mongoose";
 
-// export const formatHashtags = (hashtags) => {
-//   return hashtags
-//     .split(",")
-//     .map((word) => (word.startsWith("#") ? word : `#${word}`));
-// };
-
 const videoSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -14,8 +8,8 @@ const videoSchema = new mongoose.Schema({
     maxLength: 80,
     required: true,
   },
-  description: { type: String, trim: true, required: true, minLength: 20 },
-  createdAt: { type: Date, default: Date.now(), required: true },
+  description: { type: String, required: true, minLength: 20, trim: true },
+  createdAt: { type: Date, default: Date.now, required: true },
   hashtags: [{ type: String, trim: true }],
   meta: {
     views: { type: Number, default: 0, required: true },
