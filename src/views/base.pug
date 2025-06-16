@@ -5,21 +5,23 @@ html(lang="ko")
     link(rel="stylesheet", href="https://unpkg.com/mvp.css")
   body
     header
-      h1 Who are you? #{haenam}
+      h1=pageTitle
       nav 
         ul 
           li 
             a(href="/") Home
           li 
-            a(href="/videos/upload") Upload Video
-          li 
             a(href="/search") Search
-          if loggedIn 
+          if loggedIn
+            li 
+              a(href="/videos/upload") Upload Video
             li 
               a(href="/my-profile") #{loggedInUser.name}의 Profile
+            li
+              a(href="/users/edit") Profile Edit
             li 
-              a(href="/logout") Logout
-          else
+              a(href="/users/logout") Logout
+          else 
             li
               a(href="/login") login
             li 
