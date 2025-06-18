@@ -1,10 +1,14 @@
 mixin video(video)
-  div 
-      h4
+  div.video_mixin
+    div.video_mixin_thumb
+    div.video_mixin_data
+      h4.video_mixin_title
         a(href=`/videos/${video.id}`)=video.title
-      p=video.description
       ul 
         each hashtag in video.hashtags
           li=hashtag
       small=video.createdAt
+      div.video_mixin_meta 
+        span #{video.owner.name} /
+        span 조회수 #{video.meta.views}회
       hr

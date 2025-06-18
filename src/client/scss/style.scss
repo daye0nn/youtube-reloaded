@@ -4,8 +4,15 @@
 
 // Components SCSS
 @import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/video.scss";
 
-body {
-  background: $dark;
-  color: $light;
+// Screens SCSS
+@import "./screens/home.scss";
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
 }
