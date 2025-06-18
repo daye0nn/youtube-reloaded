@@ -1,0 +1,23 @@
+header {
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header_logo {
+    color: $accent;
+    font-size: 4rem;
+  }
+  nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      li {
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

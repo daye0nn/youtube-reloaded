@@ -1,0 +1,11 @@
+// Config SCSS
+@import "./config/_variable";
+@import "./config/_reset";
+
+// Components SCSS
+@import "./components/header.scss";
+
+body {
+  background: $dark;
+  color: $light;
+}
