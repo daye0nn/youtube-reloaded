@@ -28,14 +28,25 @@ body {
 }
 
 header {
-  padding: 10px 24px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 header .header_logo {
+  display: flex;
+  align-items: end;
   color: #dc143c;
   font-size: 4rem;
+  gap: 12px;
+}
+header .header_logo span {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 600;
 }
 header nav ul {
   display: flex;
@@ -60,12 +71,20 @@ header nav ul li .header_btn:hover {
   padding: 4px 10px;
   border-radius: 4px;
 }
+header nav ul li a .header_avatar {
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
 
 footer {
   text-align: center;
   font-size: 1.8rem;
+  opacity: 0.8;
 }
 
+.video_mixin {
+  margin-top: 40px;
+}
 .video_mixin .video_mixin_thumb {
   width: 100%;
   height: 140px;
@@ -82,15 +101,136 @@ footer {
   font-size: 1.4rem;
 }
 
-.home_videos {
+.empty_message {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 40px 0;
+}
+
+.video_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.auth_switch {
+  text-align: center;
+}
+.auth_switch a {
+  text-decoration: underline;
+}
+
+.profile_cover {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.profile_cover .profile_img {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+form {
+  margin-bottom: 60px;
+}
+form.login_form input, form.join_form input, form.editprofile_form input, form.upload_form input {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+form.editprofile_form, form.upload_form {
+  background: rgba(255, 255, 255, 0.2);
+  width: 40%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 8px;
+}
+form.editprofile_form input, form.upload_form input {
+  width: 100%;
+}
+form input {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  padding: 14px 20px;
+}
+form input[type=submit] {
+  background: #dc143c;
+  border: 1px solid #dc143c;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+form input[type=submit]:hover {
+  background: #000;
+  border: 1px solid #dc143c;
+}
+form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+  transition: all 0.3s;
+}
+form input:focus {
+  outline: none;
+}
+form input:focus::placeholder {
+  opacity: 0;
+}
+
+.social_btn {
+  border-radius: 4px;
+  font-size: 1.8rem;
+  padding: 14px 20px;
+}
+
+.social_login {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 20px;
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+}
+.social_login .social_btn-github {
+  font-size: 1.6rem;
+  border: 1px solid #24883b;
+  background: #24883b;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+}
+.social_login .social_btn-github:hover {
+  background: #000;
+  border: 1px solid #24883b;
+}
+
+.search_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+.search_form input[type=text] {
+  padding: 24px 20px;
+}
+.search_form input[type=submit] {
+  width: auto;
+  margin-top: 20px;
+  position: absolute;
+  right: 10px;
+  top: -10px;
 }
 
 main {
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 20px auto 40px;
 }

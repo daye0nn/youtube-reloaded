@@ -67,7 +67,7 @@ export const search = async (req, res) => {
       title: {
         $regex: new RegExp(keyword, "gi"),
       },
-    });
+    }).populate("owner");
   }
   return res.render("search", { pageTitle: "Search", videos });
 };

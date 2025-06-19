@@ -1,0 +1,22 @@
+.social_login {
+  border-top: 1px solid rgba($color: $light, $alpha: 0.4);
+  padding-top: 20px;
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+  .social_btn-github {
+    font-size: 1.6rem;
+    border: 1px solid $github;
+    background: $github;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    &:hover {
+      background: $dark;
+      border: 1px solid $github;
+    }
+  }
+}

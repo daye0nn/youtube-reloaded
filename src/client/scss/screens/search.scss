@@ -1,0 +1,19 @@
+.search_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  input {
+    &[type="text"] {
+      padding: 24px 20px;
+    }
+    &[type="submit"] {
+      width: auto;
+      margin-top: 20px;
+      position: absolute;
+      right: 10px;
+      top: -10px;
+    }
+  }
+}

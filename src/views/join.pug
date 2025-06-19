@@ -3,7 +3,7 @@ extends base.pug
 block content
   if errorMessage
     span=errorMessage
-  form(method="POST")
+  form(method="POST").join_form
     input(name="email" type="email" placeholder="Email" required unique)
     input(name="id" type="text" placeholder="ID" required unique)
     input(name="password" type="password" placeholder="Password" required)
@@ -11,7 +11,8 @@ block content
     input(name="name" type="text" placeholder="Name" required)
     input(name="location" type="text" placeholder="Location")
     input(type="submit" value="Join")
-  hr
-  div
+    br
+    include partials/social-login
+  div.auth_switch
     span Already hava an account? 
     a(href="/login") Login Now &rarr;

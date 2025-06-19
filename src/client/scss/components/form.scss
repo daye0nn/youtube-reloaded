@@ -1,0 +1,62 @@
+form {
+  margin-bottom: 60px;
+  &.login_form,
+  &.join_form,
+  &.editprofile_form,
+  &.upload_form {
+    input {
+      width: 40%;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 12px;
+    }
+  }
+  &.editprofile_form,
+  &.upload_form {
+    background: rgba($color: $light, $alpha: 0.2);
+    width: 40%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    input {
+      width: 100%;
+    }
+  }
+  input {
+    width: 100%;
+    background: $dark;
+    color: $light;
+    border: 1px solid $light;
+    border-radius: 4px;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    padding: 14px 20px;
+    &[type="submit"] {
+      background: $accent;
+      border: 1px solid $accent;
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        background: $dark;
+        border: 1px solid $accent;
+      }
+    }
+    &::placeholder {
+      color: rgba($color: $light, $alpha: 0.7);
+      opacity: 1;
+      transition: all 0.3s;
+    }
+    &:focus {
+      outline: none;
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.social_btn {
+  border-radius: 4px;
+  font-size: 1.8rem;
+  padding: 14px 20px;
+}

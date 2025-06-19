@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/client/js/main.js":
-/*!*******************************!*\
-  !*** ./src/client/js/main.js ***!
-  \*******************************/
+/***/ "./src/client/js/script.js":
+/*!*********************************!*\
+  !*** ./src/client/js/script.js ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/style.scss */ \"./src/client/scss/style.scss\");\n\n\n//# sourceURL=webpack://youtube/./src/client/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/style.scss */ \"./src/client/scss/style.scss\");\n\n\n//# sourceURL=webpack://youtube/./src/client/js/script.js?");
 
 /***/ }),
 
@@ -73,7 +73,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/client/js/main.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/client/js/script.js");
 /******/ 	
 /******/ })()
 ;
