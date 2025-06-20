@@ -211,6 +211,52 @@ form input:focus::placeholder {
   border: 1px solid #24883b;
 }
 
+#videoContainer {
+  position: relative;
+}
+#videoContainer video {
+  width: 100%;
+}
+#videoContainer .videoControls {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 8px 12px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+#videoContainer .videoControls.showing {
+  opacity: 1;
+}
+#videoContainer .videoControls .videoControls_play {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#videoContainer .videoControls .videoControls_timeline {
+  width: 100%;
+  flex: 1;
+}
+#videoContainer .videoControls .videoControls_timeline input {
+  width: 100%;
+}
+#videoContainer .videoControls .videoControls_volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#videoContainer .videoControls .videoControls_volume input {
+  margin-bottom: 5px;
+}
+
 .search_form {
   display: flex;
   flex-direction: column;

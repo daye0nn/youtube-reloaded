@@ -43,7 +43,8 @@ export const postEdit = async (req, res) => {
   } = req.session;
   const { id } = req.params;
   const { title, description, hashtags } = req.body;
-  const video = await Video.exists({ _id: id });
+  // const video = await Video.exists({ _id: id });
+  const video = await Video.findById(id);
   if (!video) {
     return res.render("404", { pageTitle: "Video Not Found" });
   }
@@ -116,4 +117,15 @@ export const postUpload = async (req, res) => {
       errorMessage: error._message,
     });
   }
+};
+
+export const registerView = async (req, res) => {
+  const { id } = req.params;
+  const video = await Video.findById(id);
+  if (!video) {
+    return res.sendstatus(404);
+  }
+  video.meta.views += 1;
+  await video.save();
+  return res.sendstatus(200);
 };
